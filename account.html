@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+
+{% block head %}
+{% endblock %}
+
+{% block body %}
+
+<body style="background-color:rgb(196, 246, 194);"></body>
+	<h1>My Personal Details</h1>
+	<p>
+        <label style="color: black; font-size: 15px;">First Name:</label> 
+        {{ user.first_name }}
+    </p>
+	<p>
+        <label style="color: black; font-size: 15px;">Last Name:</label>
+        {{ user.last_name }}
+    </p>
+	<p><label style="color: black; font-size: 15px;">Email Address:</label>
+        {{ user.email }}
+    </p>
+	<p><label style="color: black; font-size: 15px;">Phone Number:</label>
+        {{ user.phone_number }}
+    </p>
+</body>
+{% endblock %}

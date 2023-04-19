@@ -1,0 +1,29 @@
+{% extends 'base.html' %}{% block content %}
+<body style="background-color:rgb(222, 221, 243);"></body>
+<div class="row">
+    <div class="col s12 center-align">
+        <h1>Mortgage Payment Calculator</h1>
+    </div>
+    <div class="image-container">
+        <img src="{{ url_for('static', filename='home.jpeg') }}"
+        style="display: block; margin: 0 auto; width: 510px; height: 340px;"/>
+    </div>
+
+</div>
+    <form method="POST">
+        <label style="color: black" for="num1">Mortgage Amount:</label>
+        <input type="number" id="num1" name="num1" required>
+        <br><br>
+        <label style="color: black" for="num2">Interest Rate (i.e. 4% = 4):</label>
+        <input type="number" id="num2" name="num2" required>
+        <br><br>
+        <label style="color: black" for="num3">Years:</label>
+        <input type="number" id="num3" name="num3" required>
+        <br><br>       
+
+        <button type="submit">Calculate</button>
+    </form>
+    {% if result %}
+        <h4>Your monthly mortgage payment is: ${{ result }}</h4>
+    {% endif %}
+{% endblock %}
